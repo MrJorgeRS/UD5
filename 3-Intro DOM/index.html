@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio del DOM</title>
+</head>
+<body>
+  <h1>Ejercicio del DOM</h1>
+
+  <select id="mySelect">
+    <option value="opcion1">Opción 1</option>
+    <option value="opcion2">Opción 2</option>
+    <option value="opcion3">Opción 3</option>
+  </select>
+
+  <button onclick="showSelectedValue()">Mostrar valor seleccionado</button>
+
+  <div id="resultContainer"></div>
+
+  <script>
+    // Función para mostrar el valor seleccionado de la lista
+    function showSelectedValue() {
+      var selectElement = document.getElementById("mySelect");
+      var selectedValue = selectElement.value;
+
+      var resultContainer = document.getElementById("resultContainer");
+      var paragraph = document.createElement("p");
+      paragraph.textContent = "Valor seleccionado: " + selectedValue;
+      resultContainer.appendChild(paragraph);
+    }
+  </script>
+</body>
+</html>

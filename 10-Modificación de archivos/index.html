@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manejo de Ficheros</title>
+</head>
+<body>
+  <h1>Manejo de Ficheros</h1>
+
+  <input type="file" id="file-input">
+  <br>
+  <button onclick="cargarArchivo()">Cargar Archivo</button>
+  <br>
+  <textarea id="file-content" rows="10" cols="50"></textarea>
+  <br>
+  <button onclick="guardarArchivo()">Guardar Archivo</button>
+
+  <script>
+    var fileInput = document.getElementById("file-input");
+    var fileContent = document.getElementById("file-content");
+
+    function cargarArchivo() {
+      var file = fileInput.files[0];
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        var contenido = e.target.result;
+        fileContent.value = contenido;
+      };
+
+      reader.readAsText(file);
+    }
+
+    function guardarArchivo() {
+      var contenido = fileContent.value;
+      var blob = new Blob([contenido], { type: "text/plain" });
+
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "archivo.txt";
+      a.click();
+    }
+  </script>
+</body>
+</html>

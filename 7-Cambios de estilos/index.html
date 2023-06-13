@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modificación de Estilos y Clases con JavaScript</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: gray;
+      margin: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .red-bg {
+      background-color: red !important;
+    }
+
+    .blue-bg {
+      background-color: blue !important;
+    }
+
+    .green-bg {
+      background-color: green !important;
+    }
+
+    .large-text {
+      font-size: 24px !important;
+    }
+
+    .small-text {
+      font-size: 12px !important;
+    }
+
+    .bold-border {
+      border: 2px solid black !important;
+    }
+
+    .dashed-border {
+      border: 2px dashed black !important;
+    }
+
+    .dotted-border {
+      border: 2px dotted black !important;
+    }
+  </style>
+</head>
+<body>
+  <h1>Modificación de Estilos y Clases con JavaScript</h1>
+  
+  <div id="box" class="box">Haz clic para cambiar el estilo</div>
+
+  <button id="redButton">Rojo</button>
+  <button id="blueButton">Azul</button>
+  <button id="greenButton">Verde</button>
+
+  <button id="largeTextButton">Texto Grande</button>
+  <button id="smallTextButton">Texto Pequeño</button>
+
+  <button id="boldBorderButton">Borde Grueso</button>
+  <button id="dashedBorderButton">Borde Discontinuo</button>
+  <button id="dottedBorderButton">Borde Punteado</button>
+
+  <script src="mods.js"></script>
+</body>
+</html>

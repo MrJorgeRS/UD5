@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación dinámica de selectores</title>
+</head>
+<body>
+    <h1>Creación dinámica de selectores</h1>
+  
+    <label for="firstSelector">Primer Selector:</label>
+    <select id="firstSelector" onchange="createSecondSelector()">
+      <option value="">Selecciona una opción</option>
+      <option value="frutas">Frutas</option>
+      <option value="colores">Colores</option>
+    </select>
+  
+    <label for="secondSelector">Segundo Selector:</label>
+    <select id="secondSelector"></select>
+  
+    <script src="selectores.js"></script>
+  </body>
+</html>
+
+

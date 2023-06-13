@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de Tareas</title>
+  <style>
+    .completed {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lista de Tareas</h1>
+
+  <div id="taskContainer">
+    <ul id="taskList">
+      <li>
+        <span class="task">Tarea 1</span>
+        <button class="completeButton">Completar</button>
+        <button class="deleteButton">Eliminar</button>
+      </li>
+    </ul>
+  </div>
+
+  <form id="taskForm">
+    <input type="text" id="newTaskInput" placeholder="Agregar nueva tarea" />
+    <button type="submit">Agregar</button>
+  </form>
+
+  <script src="form.js"></script>
+</body>
+</html>
